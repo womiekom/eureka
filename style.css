@@ -838,14 +838,13 @@ body {
 @media (max-width: 768px) {
   .main {
     margin-top: 80%;
-    max-width: 100%;
   }
 
   #home {
-    padding: 4rem 1rem
+    padding: 2rem 1rem
     min-height: auto;
     margin-top: 10%;
-    max-width: 100%;
+    width: 100px;
   }
 
   #home h1 {
