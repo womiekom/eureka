@@ -841,10 +841,10 @@ body {
   }
 
   #home {
-    padding: 2rem 1rem;
+    padding: 3rem 3rem;
     min-height: auto;
     margin-top: 10%;
-    width: 350px;
+    width: 450px;
   }
 
   #home h1 {
