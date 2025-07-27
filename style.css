@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: white; 
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -18,8 +19,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 97%;
+  width: 100%;
   z-index: 999; 
+  box-sizing: border-box;
 }
 
 .logo-container {
@@ -91,8 +93,8 @@ body {
 }
 
 #home {
-  min-height: 80vh; /* dari 100vh jadi 80vh */
-  padding: 10rem 3rem 3rem; /* top, left/right, bottom */
+  min-height: 80vh;
+  padding: 10rem 3rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -170,7 +172,8 @@ body {
   max-width: 800px;
   margin: 10px auto;
   text-align: center;
-  padding: 0 10px;
+  padding: 0 1rem;
+
 }
 
 .filosofi span {
@@ -200,13 +203,12 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin: 3rem 0;
+    margin: 3rem 1rem;
 }
 
 .semangat {
     flex: 1;
     min-width: 300px;
-    margin-left: 3rem;
 }
 
 .semangat h3 {
@@ -231,7 +233,6 @@ body {
     border-radius: 12px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     text-align: center;
-    margin-right: 3rem;
 }
 
 .box h4 {
@@ -265,7 +266,7 @@ body {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 40px 0;
+  margin: 40px 1rem;
 }
 
 .card {
@@ -326,7 +327,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px; /* sesuaikan tinggi jika perlu */
+  height: 100px;
 }
 
 .badge-button2 {
@@ -348,7 +349,7 @@ body {
   max-width: 800px;
   margin: 10px auto;
   text-align: center;
-  padding: 0 10px;
+  padding: 0 1rem;
 }
 
 .skill span {
@@ -376,7 +377,7 @@ body {
   max-width: 800px;
   margin: 10px auto;
   text-align: center;
-  padding: 0 10px;
+  padding: 0 1rem;
 }
 
 .pembina span {
@@ -443,11 +444,12 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .programs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(575px, 1fr));
     gap: 30px;
     padding: 20px 0;
 }
@@ -516,7 +518,6 @@ body {
     margin-bottom: 8px;
 }
 
-/* Level Badge */
 .level-badge {
     display: inline-block;
     padding: 4px 12px;
@@ -590,7 +591,6 @@ body {
     font-weight: 600;
 }
 
-/* Topics */
 .topics {
     display: flex;
     flex-wrap: wrap;
@@ -611,12 +611,6 @@ body {
 .topic-tag:hover {
     background: #edf2f7;
     transform: translateY(-2px);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .button-container3 {
@@ -645,7 +639,7 @@ body {
   max-width: 800px;
   margin: 10px auto;
   text-align: center;
-  padding: 0 10px;
+  padding: 0 1rem;
 }
 
 .inovasi span {
@@ -674,32 +668,37 @@ body {
   min-height: 100vh;
 }
 
-@media (min-width: 768px) {
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 20px 0;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0 auto;
   margin-bottom: 4rem;
-}
-}
-
-@media (min-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-card {
-  background: linear-gradient(135deg, hsl(var(--card, 0 0% 100%)), hsl(var(--muted, 210 40% 98%)));
+  flex: 1 1 350px;
+  max-width: 400px;
+  min-width: 300px;
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
   border-radius: 0.75rem;
   overflow: hidden;
-  box-shadow: 0 10px 30px -10px hsl(var(--primary, 222.2 84% 4.9%) / 0.1);
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.1);
   transition: all 0.3s ease;
-  group: true;
+  border: 1px solid #e2e8f0;
 }
 
 .project-card:hover {
-  box-shadow: 0 20px 40px -10px hsl(var(--primary, 222.2 84% 4.9%) / 0.2);
+  box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.2);
   transform: translateY(-5px);
 }
 
@@ -726,8 +725,8 @@ body {
 }
 
 .status-completed {
-  background: hsl(142 76% 36% / 0.1);
-  color: hsl(142 76% 36%);
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-family: 'Poppins', sans-serif;
@@ -742,8 +741,8 @@ body {
 }
 
 .category {
-  background: hsl(var(--secondary, 210 40% 98%));
-  color: hsl(var(--secondary-foreground, 222.2 84% 4.9%));
+  background: #f1f5f9;
+  color: #475569;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-family: 'Poppins', sans-serif;
@@ -759,18 +758,18 @@ body {
   font-family: 'Orbitron', monospace;
   font-weight: 700;
   font-size: 1.125rem;
-  color: hsl(var(--foreground, 222.2 84% 4.9%));
+  color: #1e293b;
   margin-bottom: 0.75rem;
   transition: color 0.3s ease;
 }
 
 .project-card:hover .project-title {
-  color: hsl(var(--primary, 222.2 84% 4.9%));
+  color: #3b82f6;
 }
 
 .project-description {
   font-family: 'Poppins', sans-serif;
-  color: hsl(var(--muted-foreground, 215.4 16.3% 46.9%));
+  color: #64748b;
   font-size: 0.875rem;
   line-height: 1.7;
   margin-bottom: 1rem;
@@ -784,9 +783,9 @@ body {
 }
 
 .tech-badge {
-  border: 1px solid hsl(var(--border, 214.3 31.8% 91.4%));
-  background: hsl(var(--background, 0 0% 100%));
-  color: hsl(var(--foreground, 222.2 84% 4.9%));
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #475569;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-family: 'Poppins', sans-serif;
@@ -817,7 +816,7 @@ body {
 
 .demo-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px hsl(var(--primary, 222.2 84% 4.9%) / 0.3);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
 }
 
 @keyframes fadeIn {
@@ -835,16 +834,23 @@ body {
   animation: fadeIn 0.6s ease-out;
 }
 
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-  .main {
-    margin-top: 80%;
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    padding: 1rem;
+    width: 100%;
+    left: 0;
+    right: 0;
   }
 
   #home {
-    padding: 3rem 3rem;
-    min-height: auto;
-    margin-top: 10%;
-    width: 460px;
+    padding: 8rem 1.5rem 3rem;
+    min-height: 70vh;
+    width: 100%;
   }
 
   #home h1 {
@@ -860,107 +866,125 @@ body {
     line-height: 1.6;
   }
   
-  .filosofi span {
+  .filosofi span, .filosofi .eureka {
     font-size: 2rem;
   }
-  .filosofi .eureka {
-    font-size: 2rem;
-  }
+
   .filosofi p {
     font-size: 1rem;
   }
+  
+  .filosofi {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .semangat-container {
+    flex-direction: column;
+    margin: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .semangat p {
+    max-width: 100%;
+  }
 
   .box {
-    margin-right: 1rem;
-    margin-left: 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .card-container {
     flex-direction: column;
     align-items: center;
+    margin: 40px 1rem;
+    justify-content: center;
   }
 
   .card {
-    width: 500px;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    max-width: 400px;
     margin: 0 auto;
   }
 
-  .skill span {
+  .skill span, .skill .teknologi {
     font-size: 2rem;
   }
-  .skill .teknologi {
-    font-size: 2rem;
-  }
+
   .skill p {
     font-size: 1rem;
   }
 
-  .pembina span {
-  font-size: 2.5rem;
-}
+  .pembina span, .pembina .ekskul {
+    font-size: 2.5rem;
+  }
 
-.pembina .ekskul {
-  font-size: 2.5rem;
-}
+  .inovasi span, .inovasi .digital {
+    font-size: 2rem;
+  }
 
-.program-card {
-        width: 400px;
-        margin: 0 auto;
-    }
-    
-    .card-header {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .program-icon {
-        margin: 0 auto;
-    }
-    
-    .topics {
-        justify-content: center;
-    }
+  .inovasi p {
+    font-size: 1rem;
+  }
 
-    .programs-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+  /* Programs responsive */
+  .programs-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+  }
     
-    .program-card {
-        padding: 20px;
-    }
+  .program-card {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    max-width: 400px;
+    margin: 0 auto;
+  }
     
-    .card-header {
-        gap: 15px;
-    }
+  .card-header {
+    gap: 15px;
+  }
     
-    .program-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
+  .program-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
     
-    .program-title h3 {
-        font-size: 18px;
-    }
+  .program-title h3 {
+    font-size: 18px;
+  }
     
-    .program-description {
-        font-size: 13px;
-    }
+  .program-description {
+    font-size: 13px;
+  }
 
-    .project-card {
-       width: 400px;
-       margin: 0 auto;
-    }
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 
-    .project-card {
-       margin-bottom: 20px;
-    }
-
-  .navbar {
-    padding: 1rem 1rem;
-    gap: 0.5rem;
-    width: 96%;
+  .project-card {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .hamburger {
@@ -980,7 +1004,6 @@ body {
     padding: 0rem 0rem 5rem 0rem
   }
 
-
   .nav-links a {
     margin: 0.75rem 0;
     font-size: 1rem;
@@ -998,10 +1021,43 @@ body {
   .cta-button.active {
     display: inline-block;
     position: absolute;
-    top: calc(100% + 250px); /* muncul di bawah nav-links */
+    top: calc(100% + 330px); 
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
     margin-top: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.75rem;
+  }
+
+  #home {
+    padding: 7rem 1rem 2rem;
+  }
+
+  #home h1 {
+    font-size: 1.75rem;
+  }
+
+  .filosofi span, .filosofi .eureka,
+  .skill span, .skill .teknologi,
+  .inovasi span, .inovasi .digital {
+    font-size: 1.5rem;
+  }
+
+  .pembina span, .pembina .ekskul {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .project-content {
+    padding: 1rem;
   }
 }
