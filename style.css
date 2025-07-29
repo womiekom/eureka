@@ -94,7 +94,7 @@ body {
 
 #home {
   min-height: 80vh;
-  padding: 10rem 3rem 3rem;
+  padding: 7rem 3rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -106,7 +106,7 @@ body {
 #home h1 {
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -123,7 +123,7 @@ body {
 #home p {
   font-weight: 300;
   font-size: 1.25rem;
-  max-width: 600px;
+  max-width: 60%;
   line-height: 1.6;
   color: #f0f0f0;
 }
@@ -169,11 +169,10 @@ body {
 }
 
 .filosofi {
-  max-width: 800px;
+  max-width: 100%;
   margin: 10px auto;
   text-align: center;
   padding: 0 1rem;
-
 }
 
 .filosofi span {
@@ -192,6 +191,8 @@ body {
 }
 
 .filosofi p {
+  margin-left: 40px;
+  margin-right: 40px;
   font-size: 18px;
   color: #555;
   line-height: 1.7;
@@ -208,7 +209,7 @@ body {
 
 .semangat {
     flex: 1;
-    min-width: 300px;
+    min-width: 50%;
 }
 
 .semangat h3 {
@@ -227,7 +228,7 @@ body {
 
 .box {
     flex: 1;
-    min-width: 300px;
+    max-width: 60%;
     background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 12px;
@@ -271,7 +272,7 @@ body {
 
 .card {
   flex: 1 1 250px;
-  max-width: 300px;
+  max-width: 70%;
   background-color: #f9fbfc;
   border-radius: 12px;
   padding: 24px;
@@ -346,7 +347,7 @@ body {
 }
 
 .skill {
-  max-width: 800px;
+  max-width: 80%;
   margin: 10px auto;
   text-align: center;
   padding: 0 1rem;
@@ -374,7 +375,7 @@ body {
 }
 
 .pembina {
-  max-width: 800px;
+  max-width: 80%;
   margin: 10px auto;
   text-align: center;
   padding: 0 1rem;
@@ -400,7 +401,7 @@ body {
     padding: 40px 20px;
     margin: 30px auto;
     border-radius: 15px;
-    max-width: 600px;
+    max-width: 60%;
     transition: transform 0.3s ease;
 }
 
@@ -442,7 +443,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -636,7 +637,7 @@ body {
 }
 
 .inovasi {
-  max-width: 800px;
+  max-width: 100%;
   margin: 10px auto;
   text-align: center;
   padding: 0 1rem;
@@ -674,21 +675,20 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   padding: 20px 0;
-  max-width: 1200px;
+  max-width: 100%;
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
   margin: 0 auto;
   margin-bottom: 4rem;
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .project-card {
   flex: 1 1 350px;
-  max-width: 400px;
-  min-width: 300px;
+  max-width: 40%;
+  min-width: 30%;
   background: linear-gradient(135deg, #ffffff, #f8fafc);
   border-radius: 0.75rem;
   overflow: hidden;
@@ -878,8 +878,6 @@ body {
     padding: 20px;
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    max-width: 400px;
     margin: 0 auto;
   }
 
@@ -896,8 +894,6 @@ body {
   .box {
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    max-width: 400px;
     margin: 0 auto;
   }
 
@@ -912,8 +908,6 @@ body {
     padding: 20px;
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    max-width: 400px;
     margin: 0 auto;
   }
 
@@ -949,8 +943,6 @@ body {
     padding: 20px;
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    max-width: 400px;
     margin: 0 auto;
   }
     
