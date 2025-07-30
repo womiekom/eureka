@@ -865,8 +865,9 @@ body {
   }
 
   #home p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.6;
+
   }
   
   .filosofi span, .filosofi .eureka {
@@ -884,13 +885,12 @@ body {
   }
 
   .semangat p {
-    font-size: 2rem;
+    max-width: 100%;
+    font-size: 1rem;
   }
 
   .box {
-    flex: none;
-    width: 100%;
-    max-width: 100%;
+    max-width: 80%;
     margin: 0;
   }
 
@@ -903,9 +903,7 @@ body {
   }
 
   .card {
-    flex: none;
-    width: 100%;
-    max-width: 100%;
+    max-width: 80%;
     margin: 0;
   }
 
@@ -939,9 +937,7 @@ body {
   }
     
   .program-card {
-    flex: none;
-    width: 100%;
-    max-width: 100%;
+    max-width: 80%;
     margin: 0;
   }
     
