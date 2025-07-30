@@ -94,7 +94,7 @@ body {
 
 #home {
   min-height: 80vh;
-  padding: 7rem 3rem 3rem;
+  padding: 7rem 3rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -169,7 +169,7 @@ body {
 }
 
 .filosofi {
-  max-width: 100%;
+  max-width: 80%;
   margin: 10px auto;
   text-align: center;
   padding: 0 1rem;
@@ -224,6 +224,7 @@ body {
     line-height: 1.6;
     color: #444;
     margin-bottom: 1rem;
+    max-width: 80%;
 }
 
 .box {
@@ -401,7 +402,7 @@ body {
     padding: 40px 20px;
     margin: 30px auto;
     border-radius: 15px;
-    max-width: 60%;
+    max-width: 80%;
     transition: transform 0.3s ease;
 }
 
@@ -845,12 +846,14 @@ body {
     width: 100%;
     left: 0;
     right: 0;
+    overflow-x: hidden;
   }
 
   #home {
     padding: 8rem 1.5rem 3rem;
     min-height: 70vh;
     width: 100%;
+    overflow-x: hidden;
   }
 
   #home h1 {
@@ -873,13 +876,6 @@ body {
   .filosofi p {
     font-size: 1rem;
   }
-  
-  .filosofi {
-    padding: 20px;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
 
   .semangat-container {
     flex-direction: column;
@@ -892,23 +888,25 @@ body {
   }
 
   .box {
+    flex: none;
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .card-container {
     flex-direction: column;
     align-items: center;
-    margin: 40px 1rem;
-    justify-content: center;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .card {
-    padding: 20px;
+    flex: none;
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .skill span, .skill .teknologi {
@@ -936,14 +934,15 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    justify-content: center;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
     
   .program-card {
-    padding: 20px;
+    flex: none;
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
   }
     
   .card-header {
@@ -1018,38 +1017,5 @@ body {
     transform: translateX(-50%);
     z-index: 10;
     margin-top: 1rem;
-  }
-}
-
-/* Extra small devices */
-@media (max-width: 480px) {
-  .navbar {
-    padding: 0.75rem;
-  }
-
-  #home {
-    padding: 7rem 1rem 2rem;
-  }
-
-  #home h1 {
-    font-size: 1.75rem;
-  }
-
-  .filosofi span, .filosofi .eureka,
-  .skill span, .skill .teknologi,
-  .inovasi span, .inovasi .digital {
-    font-size: 1.5rem;
-  }
-
-  .pembina span, .pembina .ekskul {
-    font-size: 2rem;
-  }
-
-  .container {
-    padding: 0 0.5rem;
-  }
-
-  .project-content {
-    padding: 1rem;
   }
 }
