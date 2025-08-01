@@ -889,11 +889,12 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    grid-template-columns: 1fr;
     justify-items: center;
   }
   
   .box {
-    max-width: 80%;
+    max-width: 90%;
     margin: 0;
   }
 
