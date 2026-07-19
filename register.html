@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran EUREKA - Ekskul Informatika SMAN 81</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/png" href="images/Logo Eureka.png">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo-container" onclick="window.location.href='index.html'">
+            <img src="images/Logo Eureka.png" alt="Logo EUREKA" class="logo-img">
+            <div class="logo">
+                <h1>EUREKA</h1>
+                <span>Ekskul Informatika</span>
+            </div>
+        </div>
+        <a href="index.html" class="cta-button"><i class="fas fa-arrow-left"></i> Kembali ke Home</a>
+    </header>
+
+    <main class="register-container">
+        <div class="register-card" id="formCard">
+            <div class="register-header">
+                <h2>Formulir Pendaftaran</h2>
+                <p>Bergabunglah sebagai bagian dari inovator teknologi muda SMAN 81 Jakarta.</p>
+            </div>
+
+            <div class="alert alert-danger" id="submitErrorAlert">
+                <i class="fas fa-exclamation-triangle"></i> <span id="errorAlertText"></span>
+            </div>
+
+            <form id="registrationForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Nama Lengkap *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama lengkap Anda" required>
+                    <div class="form-error" id="fullNameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentClass">Kelas *</label>
+                    <select id="studentClass" name="studentClass" required>
+                        <option value="" disabled selected>Pilih kelas</option>
+                        <optgroup label="Kelas X (Grade 10)">
+                            <option value="X-1">X-1</option>
+                            <option value="X-2">X-2</option>
+                            <option value="X-3">X-3</option>
+                            <option value="X-4">X-4</option>
+                            <option value="X-5">X-5</option>
+                            <option value="X-6">X-6</option>
+                            <option value="X-7">X-7</option>
+                        </optgroup>
+                        <optgroup label="Kelas XI (Grade 11)">
+                            <option value="XI-1">XI-1</option>
+                            <option value="XI-2">XI-2</option>
+                            <option value="XI-3">XI-3</option>
+                            <option value="XI-4">XI-4</option>
+                            <option value="XI-5">XI-5</option>
+                            <option value="XI-6">XI-6</option>
+                            <option value="XI-7">XI-7</option>
+                            <option value="XI-8">XI-8</option>
+                            <option value="XI-9">XI-9</option>
+                        </optgroup>
+                    </select>
+                    <div class="form-error" id="studentClassError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Nomor WhatsApp *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Contoh: 08123456789" required>
+                    <div class="form-error" id="phoneError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Pengalaman Pemrograman *</label>
+                    <div class="experience-options">
+                        <div class="experience-card">
+                            <input type="radio" id="expBeginner" name="experience" value="Beginner" required>
+                            <label for="expBeginner">
+                                <strong>Beginner</strong>
+                                <span>Belum pernah / baru mulai</span>
+                            </label>
+                        </div>
+                        <div class="experience-card">
+                            <input type="radio" id="expIntermediate" name="experience" value="Intermediate">
+                            <label for="expIntermediate">
+                                <strong>Intermediate</strong>
+                                <span>Paham dasar & logika</span>
+                            </label>
+                        </div>
+                        <div class="experience-card">
+                            <input type="radio" id="expAdvanced" name="experience" value="Advanced">
+                            <label for="expAdvanced">
+                                <strong>Advanced</strong>
+                                <span>Pernah buat project</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-error" id="experienceError" style="margin-top: 0.5rem;"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Bidang Minat (Bisa pilih lebih dari satu) *</label>
+                    <div class="interests-grid">
+                        <div class="interest-checkbox">
+                            <input type="checkbox" id="intWeb" name="interests" value="Web Development">
+                            <label for="intWeb">Web Development</label>
+                        </div>
+                        <div class="interest-checkbox">
+                            <input type="checkbox" id="intMobile" name="interests" value="Mobile Development">
+                            <label for="intMobile">Mobile App Development</label>
+                        </div>
+                        <div class="interest-checkbox">
+                            <input type="checkbox" id="intAI" name="interests" value="AI & Machine Learning">
+                            <label for="intAI">AI & Machine Learning</label>
+                        </div>
+                        <div class="interest-checkbox">
+                            <input type="checkbox" id="intUIUX" name="interests" value="UI/UX Design">
+                            <label for="intUIUX">UI/UX Design</label>
+                        </div>
+                        <div class="interest-checkbox">
+                            <input type="checkbox" id="intCyber" name="interests" value="Cybersecurity">
+                            <label for="intCyber">Cybersecurity</label>
+                        </div>
+                        <div class="interest-checkbox">
+                            <input type="checkbox" id="intCompetitive" name="interests" value="Competitive Programming">
+                            <label for="intCompetitive">Competitive Programming</label>
+                        </div>
+                        <div class="interest-checkbox">
+                            <input type="checkbox" id="intGame" name="interests" value="Game Development">
+                            <label for="intGame">Game Development</label>
+                        </div>
+                        <div class="interest-checkbox">
+                            <input type="checkbox" id="intRobotics" name="interests" value="Robotics">
+                            <label for="intRobotics">Robotics</label>
+                        </div>
+                        <div class="interest-checkbox">
+                            <input type="checkbox" id="intOthers" name="interests" value="Others">
+                            <label for="intOthers">Others</label>
+                        </div>
+                    </div>
+                    <div class="form-error" id="interestsError" style="margin-top: 0.5rem;"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivation">Motivasi Bergabung *</label>
+                    <textarea id="motivation" name="motivation" rows="4" placeholder="Jelaskan motivasi dan apa yang ingin Anda pelajari di EUREKA..." required></textarea>
+                    <div class="form-error" id="motivationError"></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                    <span>Kirim Pendaftaran</span>
+                </button>
+            </form>
+        </div>
+
+        <div class="register-card success-card" id="successCard" style="display: none;">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3>Pendaftaran Berhasil!</h3>
+            <p>Terima kasih, data pendaftaran Anda telah tersimpan di sistem kami. Silakan klik tombol di bawah untuk bergabung ke grup WhatsApp resmi EUREKA dan mendapatkan informasi kegiatan selanjutnya:</p>
+            <a href="https://chat.whatsapp.com/CcOB5LJwQTu7oYrcVhv8qt" target="_blank" class="btn btn-primary" style="margin-bottom: 1.5rem; background-color: #25d366; border-color: #25d366; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Gabung Grup WhatsApp
+            </a>
+            <br>
+            <a href="index.html" class="btn btn-secondary">Kembali ke Beranda</a>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="register.js"></script>
+</body>
+
+</html>

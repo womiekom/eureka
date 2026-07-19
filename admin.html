@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - EUREKA SMAN 81</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/png" href="images/Logo Eureka.png">
+    
+    <style>
+        .admin-dashboard-container {
+            max-width: var(--max-width);
+            margin: 6rem auto 4rem;
+            padding: 0 1.5rem;
+        }
+        
+        .login-card {
+            max-width: 400px;
+            margin: 8rem auto;
+            background-color: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .dashboard-header h2 {
+            font-size: 1.75rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 320px;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background-color: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .stat-card .stat-label {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            color: var(--color-text-secondary);
+            font-weight: 600;
+        }
+        
+        .stat-card .stat-value {
+            font-size: 2.25rem;
+            font-weight: 700;
+            line-height: 1;
+            font-family: var(--font-heading);
+            color: var(--color-accent);
+        }
+        
+        .filters-bar {
+            background-color: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex-grow: 1;
+            min-width: 200px;
+        }
+        
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            background-color: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.88rem;
+        }
+        
+        th {
+            background-color: #faf9f2;
+            border-bottom: 1px solid var(--color-border);
+            padding: 1rem 1.25rem;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--color-text-secondary);
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-text-primary);
+            vertical-align: top;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:hover td {
+            background-color: #fcfbfa;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            color: var(--color-text-secondary);
+        }
+        
+        .empty-state i {
+            font-size: 2.5rem;
+            color: var(--color-border-hover);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo-container" onclick="window.location.href='index.html'">
+            <img src="images/Logo Eureka.png" alt="Logo EUREKA" class="logo-img">
+            <div class="logo">
+                <h1>EUREKA</h1>
+                <span>Ekskul Informatika</span>
+            </div>
+        </div>
+        <button class="cta-button" id="logoutBtn" style="display: none;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </header>
+
+    <!-- Login Panel -->
+    <div class="login-card" id="loginCard">
+        <div class="register-header">
+            <h2>Admin Login</h2>
+            <p>Masukkan username dan password admin untuk melihat data pendaftaran.</p>
+        </div>
+
+        <div class="alert alert-danger" id="loginErrorAlert">
+            <i class="fas fa-exclamation-triangle"></i> <span id="loginErrorText">Kredensial salah</span>
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="adminUsername">Username</label>
+                <input type="text" id="adminUsername" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="adminPassword">Password</label>
+                <input type="password" id="adminPassword" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+                <span>Login</span>
+            </button>
+        </form>
+    </div>
+
+    <!-- Dashboard Panel -->
+    <main class="admin-dashboard-container" id="dashboardContent" style="display: none;">
+        <div class="dashboard-header">
+            <div>
+                <h2>Dashboard Pendaftaran</h2>
+                <p>Melihat data pendaftaran calon anggota EUREKA SMAN 81.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-label">Total Calon Anggota</span>
+                <span class="stat-value" id="statTotal">0</span>
+            </div>
+        </div>
+
+        <!-- Filters Bar -->
+        <div class="filters-bar">
+            <div class="filter-group">
+                <label for="searchFilter">Cari Nama</label>
+                <input type="text" id="searchFilter" placeholder="Ketik nama...">
+            </div>
+            <div class="filter-group">
+                <label for="classFilter">Filter Kelas</label>
+                <select id="classFilter">
+                    <option value="">Semua Kelas</option>
+                    <optgroup label="Kelas X">
+                        <option value="X-1">X-1</option>
+                        <option value="X-2">X-2</option>
+                        <option value="X-3">X-3</option>
+                        <option value="X-4">X-4</option>
+                        <option value="X-5">X-5</option>
+                        <option value="X-6">X-6</option>
+                        <option value="X-7">X-7</option>
+                    </optgroup>
+                    <optgroup label="Kelas XI">
+                        <option value="XI-1">XI-1</option>
+                        <option value="XI-2">XI-2</option>
+                        <option value="XI-3">XI-3</option>
+                        <option value="XI-4">XI-4</option>
+                        <option value="XI-5">XI-5</option>
+                        <option value="XI-6">XI-6</option>
+                        <option value="XI-7">XI-7</option>
+                        <option value="XI-8">XI-8</option>
+                        <option value="XI-9">XI-9</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+        <!-- Table View -->
+        <div class="table-responsive">
+            <table id="registrationsTable">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Nama Lengkap</th>
+                        <th style="width: 12%;">Kelas</th>
+                        <th style="width: 18%;">WhatsApp</th>
+                        <th style="width: 12%;">Pengalaman</th>
+                        <th style="width: 18%;">Minat</th>
+                        <th style="width: 15%;">Motivasi</th>
+                    </tr>
+                </thead>
+                <tbody id="registrationsBody">
+                    <tr>
+                        <td colspan="6" class="empty-state">
+                            <i class="fas fa-circle-notch fa-spin" style="color: var(--color-accent);"></i>
+                            <p>Memuat data pendaftaran...</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

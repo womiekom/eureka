@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>EUREKA - Ekstrakurikuler Informatika SMA Negeri 81 Jakarta</title>
+    <meta name="title" content="EUREKA - Ekstrakurikuler Informatika SMA Negeri 81 Jakarta">
+    <meta name="description" content="Portal resmi EUREKA, Ekstrakurikuler Informatika & Teknologi SMA Negeri 81 Jakarta. Wadah eksplorasi pemrograman, workshop teknologi, proyek pengembangan, dan kompetisi IT.">
+    <meta name="keywords" content="EUREKA, Informatika SMAN 81, SMA Negeri 81 Jakarta, Ekskul Coding Jakarta, Ekstrakurikuler Informatika, Sekolah Menengah Atas 81">
+    <meta name="author" content="EUREKA SMAN 81">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eureka81.sch.id/">
+    <meta property="og:title" content="EUREKA - Ekstrakurikuler Informatika SMA Negeri 81 Jakarta">
+    <meta property="og:description" content="Wadah eksplorasi pemrograman, workshop teknologi, proyek pengembangan, dan kompetisi IT di SMA Negeri 81 Jakarta.">
+    <meta property="og:image" content="images/Logo Eureka.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="EUREKA - Ekstrakurikuler Informatika SMA Negeri 81 Jakarta">
+    <meta property="twitter:description" content="Wadah eksplorasi pemrograman, workshop teknologi, proyek pengembangan, dan kompetisi IT di SMA Negeri 81 Jakarta.">
+    <meta property="twitter:image" content="images/Logo Eureka.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/png" href="images/Logo Eureka.png">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo-container" onclick="scrollToSection(event, 'home')">
+            <img src="images/Logo Eureka.png" alt="Logo EUREKA" class="logo-img">
+            <div class="logo">
+                <h1>EUREKA</h1>
+                <span>Ekskul Informatika</span>
+            </div>
+        </div>
+        <div class="hamburger" id="hamburgerMenu">&#9776;</div>
+        <nav class="nav-links" id="navLinks">
+            <a href="#" onclick="scrollToSection(event, 'home')">Home</a>
+            <a href="#" onclick="scrollToSection(event, 'tentang')">Tentang Kami</a>
+            <a href="#" onclick="scrollToSection(event, 'karya-digital')">Karya Digital</a>
+            <a href="#" onclick="scrollToSection(event, 'info')">Info</a>
+        </nav>
+        <a href="register.html" class="cta-button" id="cta-button">Gabung Sekarang</a>
+    </header>
+
+    <section id="home">
+        <div class="terminal-prompt-prefix">eureka_core_init // ok</div>
+        <h1 class="hero-title">Tempat Di Mana<br>
+            <span class="highlight">Ide Menjadi Inovasi</span>
+        </h1>
+        <p class="hero-subtitle">Bergabunglah dengan komunitas muda SMA Negeri 81 Jakarta yang penuh semangat untuk mengeksplorasi dunia teknologi digital. Di Eureka, setiap ide kreatifmu akan berkembang menjadi inovasi yang mengagumkan.</p>
+        <div class="hero-cta">
+            <a href="register.html" class="btn btn-primary">Gabung Sekarang <i class="fas fa-arrow-right"></i></a>
+            <a href="#tentang" class="btn btn-secondary" onclick="scrollToSection(event, 'tentang')">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="tentang">
+            <div class="section-badge-container">
+                <span class="badge-button"><i class="fas fa-code-branch"></i> [ tentang_kami ]</span>
+            </div>
+            
+            <div class="section-title">
+                <h2>Filosofi <span>EUREKA</span></h2>
+                <p>Nama "Eureka" berasal dari bahasa Yunani yang berarti "Aku telah menemukannya!" - sebuah seru kegembiraan yang melambangkan momen ketika seseorang menemukan solusi atau ide brilian.</p>
+            </div>
+
+            <div class="semangat-container">
+                <div class="semangat">
+                    <h3>Semangat Penemuan Digital</h3>
+                    <p>Di era digital ini, setiap hari membawa peluang baru untuk berinovasi. Ekstrakurikuler Eureka hadir sebagai wadah bagi siswa-siswi yang memiliki passion dalam teknologi dan digital.</p>
+                    <p>Kami percaya bahwa setiap siswa memiliki potensi untuk menciptakan solusi teknologi yang dapat mengubah dunia. Melalui pembelajaran kolaboratif dan eksplorasi kreatif, kami membantu siswa menemukan "momen Eureka" mereka sendiri.</p>
+                </div>
+                <div class="box">
+                    <h4>// filosofi</h4>
+                    <p class="quote">"Εὕρηκα! - I have found it!"</p>
+                    <hr>
+                    <p class="desc">Setiap proyek yang kami kerjakan adalah perjalanan menuju momen Eureka - saat di mana ide abstrak berubah menjadi inovasi konkret yang bermanfaat.</p>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card" data-index="[01]">
+                    <div class="icon purple"><i class="fas fa-bullseye"></i></div>
+                    <h3>Visi Kami</h3>
+                    <p>Menjadi komunitas teknologi terdepan yang menghasilkan inovator-innovator muda yang siap menghadapi tantangan digital masa depan.</p>
+                </div>
+                <div class="card" data-index="[02]">
+                    <div class="icon blue"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Misi Kami</h3>
+                    <p>Mengembangkan potensi siswa dalam bidang teknologi melalui pembelajaran praktis, kolaborasi, dan eksplorasi inovasi digital.</p>
+                </div>
+                <div class="card" data-index="[03]">
+                    <div class="icon pink"><i class="fas fa-users"></i></div>
+                    <h3>Nilai Kami</h3>
+                    <p>Kolaborasi, kreativitas, dan keberanian untuk berinovasi adalah fondasi utama dalam setiap kegiatan dan proyek yang kami lakukan.</p>
+                </div>
+            </div>
+
+            <div class="pembina-box">
+                <img src="images/Pak Nagib.png" alt="Bapak Nagib Abdillah" class="foto-pembina">
+                <div class="pembina-info">
+                    <h3 class="nama">Bapak Nagib Abdillah</h3>
+                    <p class="jabatan">Guru Pembina Ekstrakurikuler</p>
+                    <hr>
+                    <p class="motto">"Membimbing siswa untuk menemukan momen Eureka dalam dunia teknologi"</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="karya-digital">
+            <div class="section-badge-container">
+                <span class="badge-button3"><i class="fas fa-code-branch"></i> [ karya_digital ]</span>
+            </div>
+            
+            <div class="section-title">
+                <h2>Showcase Inovasi <span>Digital</span></h2>
+                <p>Dari ide kreatif hingga solusi nyata - inilah karya-karya yang telah diciptakan oleh anggota komunitas Eureka.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-index="[showcase_01]">
+                    <div class="project-image">
+                        <img src="images/MIT.png" alt="Aplikasi Mobile MIT App Inventor">
+                        <div class="status-badge">
+                            <span class="status-completed">[ Completed ]</span>
+                        </div>
+                        <div class="category-badge">
+                            <span class="category">Mobile Application</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div>
+                            <h4 class="project-title">Aplikasi MIT App Inventor</h4>
+                            <p class="project-description">
+                                Aplikasi mobile yang dikembangkan menggunakan MIT App Inventor.
+                                Aplikasi ini menyediakan antarmuka yang user-friendly dan fitur navigasi yang
+                                intuitif. Platform ini memungkinkan kami untuk mempraktikkan konsep visual
+                                programming dan pengembangan aplikasi mobile secara langsung, meskipun tanpa latar
+                                belakang coding yang kompleks.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="tech-stack">
+                                <span class="tech-badge">MIT App Inventor</span>
+                                <span class="tech-badge">Visual Programming</span>
+                                <span class="tech-badge">Android</span>
+                            </div>
+                            <button class="demo-button" onclick="window.open('https://linktr.ee/mit.appinventor')">
+                                <i class="fas fa-external-link-alt"></i> Run Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-index="[showcase_02]">
+                    <div class="project-image">
+                        <img src="images/Wirausaha.png" alt="Wirausaha Digital SMAN 81">
+                        <div class="status-badge">
+                            <span class="status-completed">[ Completed ]</span>
+                        </div>
+                        <div class="category-badge">
+                            <span class="category">Digital Podcast</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div>
+                            <h4 class="project-title">Wirausaha Digital SMAN 81</h4>
+                            <p class="project-description">
+                                Sebuah podcast edukatif yang membahas dunia wirausaha digital bersama alumni SMAN 81
+                                Jakarta. Dalam sesi ini, salah satu anggota tim mewawancarai alumni yang membagikan
+                                pengalaman, tips, dan wawasan tentang dunia digital entrepreneurship.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Digital Business</span>
+                                <span class="tech-badge">Produk Digital</span>
+                                <span class="tech-badge">Entrepreneurship</span>
+                            </div>
+                            <button class="demo-button" onclick="window.open('https://www.youtube.com/watch?v=0-zeBLg-IbE')">
+                                <i class="fas fa-external-link-alt"></i> Run Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info">
+            <div class="section-badge-container">
+                <span class="badge-button4"><i class="fas fa-code-branch"></i> [ berita_kegiatan ]</span>
+            </div>
+            
+            <div class="section-title">
+                <h2>Informasi Seputar <span>EUREKA</span></h2>
+                <p>Berita terbaru, prestasi, pengumuman, dan update kegiatan dari Ekstrakurikuler Informatika SMA Negeri 81 Jakarta.</p>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card" data-index="[news_01]">
+                    <div class="info-card-image">
+                        <img src="images/1.jpeg" alt="Pelatihan Tim SMA 81 Jakarta di SMA 28">
+                    </div>
+                    <div class="info-card-content">
+                        <div>
+                            <div class="info-card-date">[ 16 Sep 2025 ]</div>
+                            <h3 class="info-card-title">Pelatihan Tim SMA 81 Jakarta di SMA 28</h3>
+                            <p class="info-card-desc">Kolaborasi pelatihan intensif tim EUREKA SMAN 81 Jakarta bersama SMA 28. Kegiatan ini berfokus pada penguasaan dasar-dasar pemrograman robotika dan pengembangan robot RC Line Follower untuk mempersiapkan kompetisi tingkat regional.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card" data-index="[news_02]">
+                    <div class="info-card-image">
+                        <img src="images/2.jpeg" alt="Livestreaming Perdana di Bulan Bahasa">
+                    </div>
+                    <div class="info-card-content">
+                        <div>
+                            <div class="info-card-date">[ 27 Okt 2025 ]</div>
+                            <h3 class="info-card-title">Livestreaming Perdana di Bulan Bahasa</h3>
+                            <p class="info-card-desc">Tim multimedia EUREKA sukses melaksanakan penyiaran langsung (livestreaming) perdana untuk memeriahkan rangkaian peringatan Bulan Bahasa di SMAN 81 Jakarta, mengintegrasikan sistem audio-visual digital secara realtime.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card" data-index="[news_03]">
+                    <div class="info-card-image">
+                        <img src="images/3.jpeg" alt="Program Belajar Python Ruangguru">
+                    </div>
+                    <div class="info-card-content">
+                        <div>
+                            <div class="info-card-date">[ 25 Okt 2025 ]</div>
+                            <h3 class="info-card-title">Program Belajar Python Ruangguru</h3>
+                            <p class="info-card-desc">EUREKA bekerja sama dengan Ruangguru menyelenggarakan program belajar Python terstruktur. Siswa dibekali logika dasar pemrograman, struktur data, dan penerapannya dalam memecahkan masalah komputasional sederhana.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card" data-index="[news_04]">
+                    <div class="info-card-image">
+                        <img src="images/4.jpeg" alt="Livestreaming Hari Guru">
+                    </div>
+                    <div class="info-card-content">
+                        <div>
+                            <div class="info-card-date">[ 25 Nov 2025 ]</div>
+                            <h3 class="info-card-title">Livestreaming Hari Guru</h3>
+                            <p class="info-card-desc">Dedikasi tim technical support EUREKA dalam menyukseskan livestreaming upacara dan perayaan Hari Guru Nasional di SMAN 81 Jakarta, menghadirkan siaran berkualitas tinggi untuk seluruh siswa dan wali murid.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card" data-index="[news_05]">
+                    <div class="info-card-image">
+                        <img src="images/5.jpeg" alt="Penghargaan Pembuatan Vidio Digitalisasi">
+                    </div>
+                    <div class="info-card-content">
+                        <div>
+                            <div class="info-card-date">[ 26 Nov 2025 ]</div>
+                            <h3 class="info-card-title">Penghargaan Pembuatan Vidio Digitalisasi</h3>
+                            <p class="info-card-desc">SMAN 81 Jakarta mendapatkan penghargaan dari 20 sekolah terpilih nasional atas pembuatan video kreatif digitalisasi pembelajaran menggunakan Interactive Flat Panel (smartboard IFP) sebagai media ajar interaktif modern.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card" data-index="[news_06]">
+                    <div class="info-card-image">
+                        <img src="images/6.jpeg" alt="Livestreaming Jamaah 81">
+                    </div>
+                    <div class="info-card-content">
+                        <div>
+                            <div class="info-card-date">[ 20 Des 2025 ]</div>
+                            <h3 class="info-card-title">Livestreaming Jamaah 81</h3>
+                            <p class="info-card-desc">Penyiaran langsung kegiatan keagamaan akbar Jamaah 81 oleh tim EUREKA. Menggunakan konfigurasi multi-kamera dan streaming encoder untuk memfasilitasi partisipasi jemaah secara daring dengan lancar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card" data-index="[news_07]">
+                    <div class="info-card-image">
+                        <img src="images/7.jpeg" alt="Workshop Literasi Digital dan Robotika Dasar">
+                    </div>
+                    <div class="info-card-content">
+                        <div>
+                            <div class="info-card-date">[ 13 Feb 2026 ]</div>
+                            <h3 class="info-card-title">Workshop Literasi Digital dan Robotika Dasar</h3>
+                            <p class="info-card-desc">Workshop penguatan literasi digital serta pengenalan elektronika dan robotika dasar didukung oleh Dinas Pendidikan Provinsi DKI Jakarta, melatih kreativitas siswa dalam merancang sistem kontrol otomatis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card" data-index="[news_08]">
+                    <div class="info-card-image">
+                        <img src="images/8.jpeg" alt="Semifinal Lomba UOB Ruangguru">
+                    </div>
+                    <div class="info-card-content">
+                        <div>
+                            <div class="info-card-date">[ 06 Jun 2025 ]</div>
+                            <h3 class="info-card-title">Semifinal Lomba UOB Ruangguru Perwakilan SMA Negeri 81 Jakarta</h3>
+                            <p class="info-card-desc">Perjuangan luar biasa perwakilan siswa terbaik SMAN 81 Jakarta di babak semifinal Lomba Akademik Nasional UOB Ruangguru. Prestasi ini membuktikan ketajaman analisis komputasional dan pemecahan masalah tim sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="images/Logo Eureka.png" alt="Logo EUREKA">
+                    <h2>EUREKA SMAN 81</h2>
+                </div>
+                <p>Wadah kolaboratif siswa SMA Negeri 81 Jakarta untuk belajar, berkreasi, dan menciptakan inovasi teknologi di era digital.</p>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#" onclick="scrollToSection(event, 'home')">Home</a></li>
+                    <li><a href="#" onclick="scrollToSection(event, 'tentang')">Tentang Kami</a></li>
+                    <li><a href="#" onclick="scrollToSection(event, 'karya-digital')">Karya Digital</a></li>
+                    <li><a href="#" onclick="scrollToSection(event, 'info')">Info</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4>Pendaftaran</h4>
+                <ul>
+                    <li><a href="register.html">Gabung Sekarang</a></li>
+                    <li><a href="#info" onclick="scrollToSection(event, 'info')">Syarat & Ketentuan</a></li>
+                    <li><a href="admin.html">Portal Admin</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 EUREKA SMAN 81 Jakarta. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
