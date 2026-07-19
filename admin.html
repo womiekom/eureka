@@ -5,22 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - EUREKA SMAN 81</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    
+
     <link rel="icon" type="image/png" href="images/Logo Eureka.png">
-    
+
     <style>
         .admin-dashboard-container {
             max-width: var(--max-width);
             margin: 6rem auto 4rem;
             padding: 0 1.5rem;
         }
-        
+
         .login-card {
             max-width: 400px;
             margin: 8rem auto;
@@ -30,7 +32,7 @@
             padding: 2.5rem;
             box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
         }
-        
+
         .dashboard-header {
             display: flex;
             justify-content: space-between;
@@ -39,19 +41,19 @@
             flex-wrap: wrap;
             gap: 1.5rem;
         }
-        
+
         .dashboard-header h2 {
             font-size: 1.75rem;
             letter-spacing: -0.02em;
         }
-        
+
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr;
             max-width: 320px;
             margin-bottom: 2rem;
         }
-        
+
         .stat-card {
             background-color: var(--color-card);
             border: 1px solid var(--color-border);
@@ -61,7 +63,7 @@
             flex-direction: column;
             gap: 8px;
         }
-        
+
         .stat-card .stat-label {
             font-family: var(--font-mono);
             font-size: 0.72rem;
@@ -69,7 +71,7 @@
             color: var(--color-text-secondary);
             font-weight: 600;
         }
-        
+
         .stat-card .stat-value {
             font-size: 2.25rem;
             font-weight: 700;
@@ -77,7 +79,7 @@
             font-family: var(--font-heading);
             color: var(--color-accent);
         }
-        
+
         .filters-bar {
             background-color: var(--color-card);
             border: 1px solid var(--color-border);
@@ -89,7 +91,7 @@
             flex-wrap: wrap;
             align-items: center;
         }
-        
+
         .filter-group {
             display: flex;
             flex-direction: column;
@@ -97,7 +99,7 @@
             flex-grow: 1;
             min-width: 200px;
         }
-        
+
         .table-responsive {
             width: 100%;
             overflow-x: auto;
@@ -105,14 +107,14 @@
             border: 1px solid var(--color-border);
             border-radius: var(--border-radius);
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
             font-size: 0.88rem;
         }
-        
+
         th {
             background-color: #faf9f2;
             border-bottom: 1px solid var(--color-border);
@@ -123,28 +125,28 @@
             color: var(--color-text-secondary);
             font-weight: 600;
         }
-        
+
         td {
             padding: 1rem 1.25rem;
             border-bottom: 1px solid var(--color-border);
             color: var(--color-text-primary);
             vertical-align: top;
         }
-        
+
         tr:last-child td {
             border-bottom: none;
         }
-        
+
         tr:hover td {
             background-color: #fcfbfa;
         }
-        
+
         .empty-state {
             text-align: center;
             padding: 3rem 1.5rem;
             color: var(--color-text-secondary);
         }
-        
+
         .empty-state i {
             font-size: 2.5rem;
             color: var(--color-border-hover);
@@ -162,7 +164,8 @@
                 <span>Ekskul Informatika</span>
             </div>
         </div>
-        <button class="cta-button" id="logoutBtn" style="display: none;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        <button class="cta-button" id="logoutBtn" style="display: none;"><i class="fas fa-sign-out-alt"></i>
+            Logout</button>
     </header>
 
     <!-- Login Panel -->
